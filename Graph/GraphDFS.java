@@ -57,6 +57,7 @@ public class GraphDFS {
 
     void DFS(){
         boolean[] isVisited = new boolean[v];
+        //This loop makes sure the case where graph is discontinuous
         for(int i=0; i<v; i++)
         {
             if(!isVisited[i])
@@ -70,7 +71,7 @@ public class GraphDFS {
         System.out.print(v + " ");
 
         for(int i=0; i<adj[v].size(); i++) {
-            int n = adj[v].get(i);
+            int n = adj[v].get(i); //Gets all connected nodes of v one by one
             if(!isVisited[n])
                 DFSUtil(isVisited, n);
         }
