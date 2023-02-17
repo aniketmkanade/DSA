@@ -107,7 +107,7 @@ public class GraphTopologicalSortingKanh{
                 q.add(i);
         }
         
-        //2. DFS + Reduction in inorder array
+        //2. BFS + Reduction in inorder array
         int count = 0;
         while (!q.isEmpty()) {
             int a = q.peek();
